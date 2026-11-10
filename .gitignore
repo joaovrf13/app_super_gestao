@@ -1,0 +1,36 @@
+# Configuração local e credenciais
+.env
+.env.*
+!.env.example
+/auth.json
+/storage/*.key
+
+# Dependências
+/node_modules/
+/vendor/
+
+# Arquivos gerados
+*.log
+/public/build/
+/public/hot
+/public/storage
+/storage/pail
+/.phpunit.result.cache
+/.phpunit.cache/
+
+# Banco SQLite local
+/database/*.sqlite
+
+# Editores e sistema
+/.fleet/
+/.idea/
+/.nova/
+/.vscode/
+/.zed/
+/.phpactor.json
+.DS_Store
+Thumbs.db
+
+# Laravel Homestead
+Homestead.json
+Homestead.yaml
