@@ -2,6 +2,8 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\PrincipalController;
+use App\Http\Controllers\SobreNosController;
+use App\Http\Controllers\ContatoController;
 
 /*Route::get('/', function () {
     return 'Olá seja bem vindo ao meu site!';
@@ -9,6 +11,7 @@ use App\Http\Controllers\PrincipalController;
 
 Route::get('/', [PrincipalController::class, 'principal']);
 
-Route::get('/sobre-nos', 'SobreNosController@sobreNos');
+Route::get('/sobre-nos', [SobreNosController::class, 'sobreNos']);
 
-Route::get('/contato', 'ContatoController@contato');
+Route::get('/contato', [ContatoController::class, 'contato']);
+
