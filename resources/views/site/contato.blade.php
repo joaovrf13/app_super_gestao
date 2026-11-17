@@ -1,14 +1,14 @@
-<h3>Contato</h3>
+<h3>Contato (view)</h3>
 
 
 <ul>
     <li>
-      <a href="/">  Principal</a>
+      <a href="{{ route('site.index') }}">  Principal</a>
     </li>
     <li>
-        <a href="/sobre-nos">  Sobre Nós</a>
+        <a href="{{ route('site.sobrenos') }}">  Sobre Nós</a>
     </li>
     <li>
-        <a href="/contato">  Contatos</a>
+        <a href="{{ route('site.contato') }}">  Contatos</a>
     </li>
 </ul>
