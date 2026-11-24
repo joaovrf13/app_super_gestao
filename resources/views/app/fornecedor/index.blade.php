@@ -1,15 +1,18 @@
 <h3>Fornecedores</h3>
 
 @php
-
+    /* 
+        if (isset($variavel)) {} // enquanto executa se o retorno for true se a variavel estiver definida
+    */
 @endphp
 
-@dd($fonecedores)
+@isset($fornecedores)
+   Fornecedor: {{ $fornecedores[0]['nome'] }}
+    <br>
+    Status: {{ $fornecedores[0]['status'] }}
+    <br>
+    @isset($fornecedores[0]['cnpj'])
+         Cnpj: {{ $fornecedores[0]['cnpj'] }}
+    @endisset
+@endisset
 
-@if(count(fornecedores) > 0 && count(fornecedores) < 10)
-    <h3>Existem alguns fornecedores cadastrados</h3>
-@elseif (count(fornecedores) > 10)
-    <h3>Existem muitos fornecedores cadastrados</h3>
-@else
-    <h3>Não existem fornecedores cadastrados</h3>  
-@endif
