@@ -2,7 +2,15 @@
 
 @php
     /* 
-        if (isset($variavel)) {} // enquanto executa se o retorno for true se a variavel estiver definida
+        if (empty($variavel)) {} //retorna true se a variável estiver vazia
+        ''
+        0
+        0.0
+        '0'
+        null
+        false
+        array() (um array vazio)
+        $variavel; (uma variável declarada, mas sem valor)
     */
 @endphp
 
@@ -13,6 +21,9 @@
     <br>
     @isset($fornecedores[0]['cnpj'])
          Cnpj: {{ $fornecedores[0]['cnpj'] }}
+         @empty($fornecedores[0]['cnpj'])
+           Vazio
+        @endempty
     @endisset
 @endisset
 
